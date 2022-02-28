@@ -8,7 +8,7 @@ const validationMiddleware = (
     value: string | "body" | "query" | "params" = "body",
     skipMissingProperties = false,
     whitelist = true,
-    forbidNonWhitelisted = true,
+    forbidNonWhitelisted = true
 ): RequestHandler => {
     return (req, res, next) => {
         validate(plainToClass(type, req[value]), {
@@ -19,7 +19,7 @@ const validationMiddleware = (
             if (errors.length > 0) {
                 const message = errors
                     .map((error: ValidationError) =>
-                        Object.values(error.constraints),
+                        Object.values(error.constraints)
                     )
                     .join(", ");
                 next(new HttpException(400, message));
