@@ -5,8 +5,7 @@ const userModel: User[] = [
     {
         id: 1,
         email: "example1@email.com",
-        password:
-            "$2b$10$TBEfaCe1oo.2jfkBDWcj/usBj4oECsW2wOoDXpCa2IH9xqCpEK/hC",
+        password: "12345a",
     },
     {
         id: 2,
